@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nicoly Jang</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <!-- Cabeçalho -->
+    <header class="header-menu">
+      <div class="header-menu-logo">
+        <a href="index.html">Nicoly Jang</a>
+      </div>
+
+      <nav class="header-menu-nav">
+        <ul class="header-menu-nav-list">
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="header-menu-nav-list-item" href="#projects">Projetos</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="#skills">Habilidades</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Alternar tema">
+        <img
+          src="./assets/solar_moon-bold.svg"
+          alt="Modo escuro"
+          class="theme-toggle-icon moon-icon"
+        />
+
+        <img
+          src="./assets/solar_sun-bold.svg"
+          alt="Modo claro"
+          class="theme-toggle-icon sun-icon"
+        />
+      </button>
+    </header>
+
+    <!-- Principal -->
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="main-hero-section">
+        <img
+          src="./assets/cat.jpg"
+          alt="Foto de perfil"
+          class="main-hero-section-image"
+        />
+
+        <div class="main-hero-section-content">
+          <h1 class="main-hero-section-title">Nicoly Jang</h1>
+          <h3 class="main-hero-section-subtitle">Desenvolvedora Front-end</h3>
+
+          <div class="main-hero-section-actions">
+            <button class="btn">
+              <i class="fa-solid fa-file-arrow-down" id="icone"></i
+              ><a
+                href="#"
+                class="main-hero-section-actions-button"
+                target="_blank"
+                >Download CV</a
+              >
+            </button>
+            <button class="btn">
+              <i class="fa-solid fa-envelope" id="icone"></i
+              ><a href="#contact" class="main-hero-section-actions-button"
+                >Fale comigo</a
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section id="about" class="main-about-section">
+        <h2 class="main-section-title">Sobre</h2>
+        <p class="main-about-section-text">
+          Sou formada em Análise e Desenvolvimento de Sistemas, com foco em
+          front-end e interesse especial por interfaces bem estruturadas,
+          acessíveis e visualmente consistentes.
+        </p>
+
+        <p class="main-about-section-text">
+          Atualmente trabalho com Figma, aplicando também fundamentos de UI/UX
+          para criar experiências digitais mais intuitivas.
+        </p>
+
+        <p class="main-about-section-text">
+          Estou sempre buscando aprender, evoluir tecnicamente e participar de
+          projetos que gerem impacto real.
+        </p>
+        <div class="main-about-section-info">
+          <span>Brasil</span>
+          <span>Português • Inglês intermediário</span>
+          <span>Front-end & UI</span>
+        </div>
+      </section>
+
+      <section id="projects" class="main-projects-section">
+        <h2>Projetos</h2>
+
+        <div class="main-projects-section-grid">
+          <article class="main-projects-section-grid-card">
+            <img
+              src="./assets/projeto-1.png"
+              alt="Projeto 1"
+              class="main-projects-section-grid-card-image"
+            />
+            <h3 class="main-projects-section-grid-card-title">Pet Walkers</h3>
+            <p class="main-projects-section-grid-card-description">
+              Plataforma que conecta tutores de pets com passeadores.
+            </p>
+            <button class="btn main-projects-section-grid-card-button">
+              <a
+                href="https://www.figma.com/proto/aXU1wVdHDUHJc27WbSaT5K/Pet-Walkers?node-id=2032-867&p=f&viewport=577%2C25%2C0.02&t=zC3xJQQEY2eLfLNC-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2032%3A867&show-proto-sidebar=1&page-id=2032%3A232"
+                target="_blank"
+                >Ver projeto</a
+              >
+            </button>
+          </article>
+
+          <article class="main-projects-section-grid-card">
+            <img
+              src="./assets/projeto-2.png"
+              alt="Projeto 2"
+              class="main-projects-section-grid-card-image"
+            />
+            <h3 class="main-projects-section-grid-card-title">
+              Estudo de Caso
+            </h3>
+            <p class="main-projects-section-grid-card-description">
+              Design de uma landing page para uma design de interiores.
+            </p>
+            <button class="btn main-projects-section-grid-card-button">
+              <a
+                href="https://www.behance.net/gallery/234996393/Marina-Ribeiro"
+                target="_blank"
+                >Ver projeto</a
+              >
+            </button>
+          </article>
+
+          <article class="main-projects-section-grid-card">
+            <img
+              src="./assets/projeto-3.png"
+              alt="Projeto 3"
+              class="main-projects-section-grid-card-image"
+            />
+            <h3 class="main-projects-section-grid-card-title">
+              Atelier Calium
+            </h3>
+            <p class="main-projects-section-grid-card-description">
+              Design de uma pequena loja de cerâmicas.
+            </p>
+            <button class="btn main-projects-section-grid-card-button">
+              <a
+                href="https://www.figma.com/proto/rjQB2Pq6aYxeh3musB6NML/Atelier-Caulim?page-id=0%3A1&node-id=2010-92&starting-point-node-id=2010%3A92&t=zAhbkeC0vxa1jhvK-1
+                target="_blank"
+                >Ver projeto</a
+              >
+            </button>
+          </article>
+        </div>
+      </section>
+
+      <!-- Habilidades -->
+      <section id="skills" class="main-skills-section">
+        <h2 class="section-title">Habilidades</h2>
+
+        <div class="main-skills-grid">
+          <div class="main-skills-grid-card">
+            <h3>Front-end</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Vue</li>
+            </ul>
+          </div>
+
+          <div class="main-skills-grid-card">
+            <h3>Design</h3>
+            <ul>
+              <li>UX Design</li>
+              <li>UI Design</li>
+              <li>Design Patterns</li>
+              <li>Wireframes</li>
+            </ul>
+          </div>
+
+          <div class="main-skills-grid-card">
+            <h3>Ferramentas</h3>
+            <ul>
+              <li>Git/GitHub</li>
+              <li>Figma</li>
+              <li>Docker</li>
+              <li>AWS</li>
+              <li>MySQL</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="main-skills-grid-tech-marquee">
+          <div class="main-skills-grid-tech-track">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>Git/GitHub</span>
+            <span>MySQL</span>
+            <span>Figma</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>Git/GitHub</span>
+            <span>MySQL</span>
+            <span>Figma</span>
+            <span>Python</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section id="contact" class="main-contact-section">
+        <h2 class="section-title">Vamos construir algo juntos?</h2>
+
+        <p class="main-contact-text">
+          Estou aberta a oportunidades, colaborações e novos projetos.
+        </p>
+
+        <div class="main-contact-links">
+          <button class="btn">
+            <i class="fa-brands fa-linkedin" id="icone"></i>
+            <a
+              href="https://www.linkedin.com/in/nicoly-jang/"
+              class="button"
+              target="_blank"
+              >LinkedIn</a
+            >
+          </button>
+          <button class="btn">
+            <i class="fa-brands fa-github" id="icone"></i>
+            <a
+              href="https://github.com/nicolyjjang"
+              class="button"
+              target="_blank"
+              >GitHub</a
+            >
+          </button>
+          <button class="btn">
+            <i class="fa-solid fa-envelope" id="icone"></i>
+            <a href="nicolyjjang@gmail.com" class="button" target="_blank"
+              >Email</a
+            >
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-menu">
+      <p class="footer-menu-text">
+        Todos os direitos reservados &copy; 2026 Nicoly Jang
+      </p>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

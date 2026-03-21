@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header class="header-menu">
+      <div class="header-menu-logo">
+        <a href="index.html">Nicoly Jang</a>
+      </div>
+
+      <nav class="header-menu-nav">
+        <ul class="header-menu-nav-list">
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="header-menu-nav-list-item" href="#projects">Projetos</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="#skills">Habilidades</a>
+          </li>
+          <li class="header-menu-nav-list-item">
+            <a class="nav-link" href="#contact">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Alternar tema">
+        <img
+          src="./assets/solar_moon-bold.svg"
+          alt="Modo escuro"
+          class="theme-toggle-icon moon-icon"
+        />
+
+        <img
+          src="./assets/solar_sun-bold.svg"
+          alt="Modo claro"
+          class="theme-toggle-icon sun-icon"
+        />
+      </button>
+    </header>
+
+    <main>
+      <div class="form-container">
+        <h2 class="form-container-title">Vamos construir algo juntos?</h2>
+        <form>
+          <label for="text">Nome</label>
+          <input
+            type="name"
+            name="name"
+            placeholder="Digite seu nome"
+            required
+          />
+          <br />
+
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <br />
+
+          <label for="number">Celular</label>
+          <input
+            type="number"
+            name="telefone"
+            placeholder="(99) 99999-9999"
+            required
+          />
+          <br />
+
+          <label for="date">Data de Nascimento</label>
+          <input type="date" name="nascimento" /> <br />
+
+          <div class="genero">
+            <label>Gênero</label>
+            <input type="radio" id="genero" name="feminino" value="F" checked />
+            <label for="genero">Feminino</label>
+
+            <input type="radio" id="genero" name="masculino" value="M" />
+            <label for="genero">Masculino</label> <br />
+          </div>
+
+          <br />
+          <label for="message">Mensagem</label>
+          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+
+          <div class="buttons">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn">Limpar</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-menu">
+      <p class="footer-menu-text">
+        Todos os direitos reservados &copy; 2026 Nicoly Jang
+      </p>
+    </footer>
+  </body>
+</html>
