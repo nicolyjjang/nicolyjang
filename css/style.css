@@ -65,6 +65,16 @@ button {
   font-weight: 700;
 }
 
+.header-menu-toggle {
+  display: none;
+}
+
+.header-menu-toggle-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* Navegação */
 .header-menu-nav {
   padding: 1rem 0;
@@ -359,19 +369,39 @@ form {
   padding: 20px 0;
 }
 
-input {
+input:not([type="radio"]) {
+  width: 100%;
+  max-width: 400px;
   border: 1px solid var(--text-color);
   border-radius: 8px;
-  padding: 10px;
-  margin: 12px;
+  padding: 12px;
+  margin: 12px 0 24px;
+  font-family: inherit;
+}
+
+.genero {
+  margin: 20px 0;
+}
+
+.genero-opcoes {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.genero-opcoes input[type="radio"] {
+  margin: 0;
 }
 
 textarea {
-  display: flex;
-  flex-direction: column;
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   border: 1px solid var(--text-color);
   border-radius: 8px;
+  padding: 12px;
+  font-family: inherit;
+  resize: vertical;
 }
 
 .buttons {
@@ -385,61 +415,170 @@ textarea {
 /* Responsividade */
 @media (max-width: 1200px) {
   h1 {
-    font-size: 2.6rem;
+    font-size: 3rem;
   }
+
   h2 {
-    font-size: 1.4rem;
+    font-size: 2rem;
   }
+
+  .main-hero-section {
+    gap: 48px;
+    padding: 60px 40px;
+  }
+
   .main-hero-section-image {
     width: 250px;
     height: 250px;
   }
+
   .main-hero-section-subtitle {
     font-size: 1.6rem;
+  }
+
+  .main-about-section,
+  .main-projects-section,
+  .main-contact-section,
+  .form-container {
+    padding: 80px 40px;
+  }
+
+  .main-skills-grid {
+    padding: 0 40px;
   }
 }
 
 @media (max-width: 800px) {
-  .header-menu-logo a {
-    font-size: 1.1rem;
-  }
   .header-menu {
-    flex-wrap: wrap;
+    position: relative;
+    gap: 10px;
   }
+
+  .header-menu-toggle-icon {
+    display: block;
+  }
+
+  .header-menu-nav {
+    display: none;
+    width: 100%;
+  }
+
   .header-menu-nav-list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px 0;
   }
+
+  .header-menu-toggle:checked + .header-menu-toggle-icon + .header-menu-nav {
+    display: block;
+  }
+
   .theme-toggle {
-    width: 40px;
-    height: 40px;
+    display: none;
   }
+
+  .main-hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 24px;
+  }
+
   .main-hero-section-content {
-    justify-content: center;
     align-items: center;
   }
+
   .main-hero-section-actions {
-    flex-wrap: wrap;
     justify-content: center;
   }
-  .main-hero-section-title {
-    font-size: 2rem;
+
+  .main-projects-section-grid {
+    justify-items: center;
   }
-  .main-hero-section-subtitle {
-    font-size: 1.2rem;
+
+  .main-projects-section-grid-card {
+    max-width: 100%;
+  }
+
+  .main-about-section-info {
+    gap: 20px;
+  }
+
+  .main-skills-grid {
+    padding: 0 24px;
+  }
+
+  .main-contact-links {
+    gap: 16px;
+  }
+
+  textarea {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
 @media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
   .header-menu-logo a {
     font-size: 1rem;
   }
-  .theme-toggle {
-    width: 32px;
-    height: 32px;
+
+  .header-menu-nav-list {
+    gap: 16px;
   }
-  .main-hero-section {
+
+  .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+
+  .main-hero-section-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .main-hero-section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .main-hero-section-actions {
     flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .main-about-section,
+  .main-projects-section,
+  .main-contact-section,
+  .form-container {
+    padding: 60px 20px;
+  }
+
+  .main-skills-grid {
+    padding: 0 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    margin: 8px 0;
   }
 }
