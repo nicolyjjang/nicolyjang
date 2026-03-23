@@ -190,13 +190,13 @@ button {
 .main-about-section {
   padding: 100px 80px;
   background-image: url("../assets/bg-contact.png");
-  min-height: 80vh;
+  min-height: 60vh;
 }
 
 .main-about-section-text {
   margin-top: 20px;
   line-height: 1.8;
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .main-about-section-info {
