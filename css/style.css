@@ -566,6 +566,10 @@ textarea {
     padding: 60px 20px;
   }
 
+  .main-projects-section-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
   .main-skills-grid {
     padding: 0 20px;
   }
