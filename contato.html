@@ -1,124 +1,142 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contato</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!-- Cabeçalho -->
-    <header class="header-menu">
-      <div class="header-menu-logo">
-        <a href="index.html">Nicoly Jang</a>
-      </div>
 
-      <input type="checkbox" id="menu-toggle" class="header-menu-toggle" />
-      <label for="menu-toggle" class="header-menu-toggle-icon">☰</label>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
 
-      <nav class="header-menu-nav">
-        <ul class="header-menu-nav-list">
-          <li class="header-menu-nav-list-item">
-            <a class="nav-link" href="index.html">Home</a>
-          </li>
-          <li class="header-menu-nav-list-item">
-            <a class="nav-link" href="#about">Sobre</a>
-          </li>
-          <li class="header-menu-nav-list-item">
-            <a class="header-menu-nav-list-item" href="#projects">Projetos</a>
-          </li>
-          <li class="header-menu-nav-list-item">
-            <a class="nav-link" href="#skills">Habilidades</a>
-          </li>
-          <li class="header-menu-nav-list-item">
-            <a class="nav-link" href="#contact">Contato</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" aria-label="Alternar tema">
-        <img
-          src="./assets/solar_moon-bold.svg"
-          alt="Modo escuro"
-          class="theme-toggle-icon moon-icon"
-        />
+<body>
+  <!-- Cabeçalho -->
+  <header class="header-menu">
+    <div class="header-menu-logo">
+      <a href="index.html">Nicoly Jang</a>
+    </div>
 
-        <img
-          src="./assets/solar_sun-bold.svg"
-          alt="Modo claro"
-          class="theme-toggle-icon sun-icon"
-        />
-      </button>
-    </header>
+    <input type="checkbox" id="menu-toggle" class="header-menu-toggle" />
+    <label for="menu-toggle" class="header-menu-toggle-icon">☰</label>
 
-    <main>
-      <div class="form-container">
-        <h2 class="form-container-title">Vamos construir algo juntos?</h2>
-        <form>
-          <label for="text">Nome</label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Digite seu nome"
-            required
-          />
-          <br />
+    <nav class="header-menu-nav">
+      <ul class="header-menu-nav-list">
+        <li class="header-menu-nav-list-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="header-menu-nav-list-item">
+          <a class="nav-link" href="#about">Sobre</a>
+        </li>
+        <li class="header-menu-nav-list-item">
+          <a class="header-menu-nav-list-item" href="#projects">Projetos</a>
+        </li>
+        <li class="header-menu-nav-list-item">
+          <a class="nav-link" href="#skills">Habilidades</a>
+        </li>
+        <li class="header-menu-nav-list-item">
+          <a class="nav-link" href="#contact">Contato</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" aria-label="Alternar tema">
+      <img src="./assets/solar_moon-bold.svg" alt="Modo escuro" class="theme-toggle-icon moon-icon"
+        data-context="dark" />
 
-          <label for="email">E-mail</label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Digite seu e-mail"
-            required
-          />
-          <br />
+      <img src="./assets/solar_sun-bold.svg" alt="Modo claro" class="theme-toggle-icon sun-icon" data-context="light" />
+    </button>
+  </header>
 
-          <label for="number">Celular</label>
-          <input
-            type="tel"
-            name="telefone"
-            placeholder="(99) 99999-9999"
-            required
-          />
-          <br />
+  <main>
+    <!-- Formulário de contato -->
+    <section class="main__formulario">
+      <div class="main__formulario-container">
+        <h2 class="main__formulario-container-title">Vamos construir algo juntos?</h2>
+        <form data-formulario>
+          <fieldset class="main__formulario-container-campo">
+            <label for="name" class="main__formulario-container-campo-etiqueta">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Digite seu nome" required minlength="3" />
+            <span class="mensagem-erro"></span>
+          </fieldset>
 
-          <label for="date">Data de Nascimento</label>
-          <input type="date" name="nascimento" /> <br />
+          <fieldset class="main__formulario-container-campo">
+            <label for="email" class="main__formulario-container-campo-etiqueta">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required minlength="4" />
+            <span class="mensagem-erro"></span>
+          </fieldset>
 
-          <div class="genero">
-            <span>Gênero</span>
+          <fieldset class="main__formulario-container-campo">
+            <label for="telefone" class="main__formulario-container-campo-etiqueta">Celular</label>
+            <input type="tel" name="telefone" id="telefone" for="telefone" placeholder="(99) 99999-9999" required
+              pattern="[0-9]{10,11}" />
+            <span class="mensagem-erro"></span>
+          </fieldset>
 
-            <div class="genero-opcoes">
-              <input
-                type="radio"
-                id="feminino"
-                name="genero"
-                value="F"
-                checked
-              />
-              <label for="feminino">Feminino</label>
+          <fieldset class="main__formulario-container-campo">
+            <label for="aniversario" class="main__formulario-container-campo-etiqueta">Data de Nascimento</label>
+            <input type="date" name="aniversario" id="aniversario" />
+            <span class="mensagem-erro"></span>
+          </fieldset>
 
-              <input type="radio" id="masculino" name="genero" value="M" />
-              <label for="masculino">Masculino</label>
+          <fieldset class="main__formulario-container-campo">
+            <legend class="main__formulario-container-campo-etiqueta">Gênero</legend>
+            <div class="generos-opcoes">
+              <input type="radio" name="genero" id="feminino" value="feminino" checked /> Feminino
+              <input type="radio" name="genero" id="masculino" value="masculino" /> Masculino
             </div>
-          </div>
 
-          <br />
-          <label for="message">Mensagem</label>
-          <textarea name="message" id="message" cols="30" rows="5"></textarea>
+          </fieldset>
+
+          <fieldset class="main__formulario-container-campo">
+            <label for="message" class="main__formulario-container-campo-etiqueta">Mensagem</label>
+            <textarea name="message" id="message"></textarea>
+            <span class="mensagem-erro"></span>
+          </fieldset>
 
           <div class="buttons">
             <button type="submit" class="btn">Enviar</button>
             <button type="reset" class="btn">Limpar</button>
+            <span class="mensagem-erro"></span>
           </div>
         </form>
       </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="footer-menu">
-      <p class="footer-menu-text">
-        Todos os direitos reservados &copy; 2026 Nicoly Jang
-      </p>
-    </footer>
-  </body>
+    <!-- Capturar foto-->
+    <section class="main__foto">
+      <div class="main__foto-container">
+        <h2 class="main__foto-title">Vamos tirar uma foto?</h2>
+        <p class="main__foto-text">Clique no quadro abaixo para capturarmos uma imagem sua!</p>
+
+        <img src="./assets/reconhecimento.png" alt="Rosto com olhos e um sorriso dentro de um enquadramento"
+          data-video-botao class="main__foto-imagem">
+
+        <div class="main__foto-camera" data-camera>
+          <video width="320" height="240" autoplay data-video></video>
+          <button class='main__foto-botao btn' data-tirar-foto>Tirar foto</button>
+        </div>
+
+        <div class="main__foto-mensagem" data-mensagem>
+          <canvas width="320" height="240" data-video-canvas></canvas>
+          <div class="main__foto-mensagem-detalhes">
+            <img src="./assets/icone-check.png" alt="Ícone de validação" class="main__foto-imagem-icone">
+            <p>Prontinho, imagem capturada!</p>
+
+            <a href="#" class="main__foto-botao main__foto-botao--ancora btn" data-enviar>Enviar foto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-menu">
+    <p class="footer-menu-text">
+      Todos os direitos reservados &copy; 2026 Nicoly Jang
+    </p>
+  </footer>
+  <script type="module" src="./js/formulario.js"></script>
+  <script src="./js/camera.js"></script>
+  <script src="./js/trocar-tema.js"></script>
+  <script src="./js/logo.js"></script>
+</body>
+
 </html>
