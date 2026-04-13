@@ -661,6 +661,7 @@ textarea {
 
   h2 {
     font-size: 1.6rem;
+    margin: auto 24px;
   }
 
   .header-menu-logo a {
